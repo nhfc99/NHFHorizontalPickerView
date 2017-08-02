@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/nhfc99/NHFHorizontalPickerView"
   s.license          = 'MIT'
   s.author           = {"牛宏飞"=>"nhfc99@163.com"}  
-  s.source           = {:git => "https://github.com/nhfc99/NHFHorizontalPickerView.git", :commit => "HorizontalPickerViewUICollectionViewCell",:tag => s.version.to_s}
+  s.source           = {:git => "https://github.com/nhfc99/NHFHorizontalPickerView.git",:tag => s.version.to_s}
 
   s.platform     = :ios, '8.0'
   s.ios.deployment_target = '8.0'
