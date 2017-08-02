@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "NHFHorizontalPickerView"
-  s.version          = "1.0.2"
+  s.version          = "1.0.3"
   s.summary          = "左右滑动选择文本数据"
   s.homepage         = "https://github.com/nhfc99/NHFHorizontalPickerView"
   s.license          = 'MIT'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
-  s.source_files = 'NHFHorizontalPickerView/HorizontalPickerView/*.{h,m}'
+  s.source_files = 'HorizontalPickerView/*.{h,m}'
   s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
 
 end
