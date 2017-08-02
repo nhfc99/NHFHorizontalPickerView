@@ -16,7 +16,7 @@
 		89007C541F29D9B600EA8D75 /* NHFHorizontalPickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C531F29D9B600EA8D75 /* NHFHorizontalPickerViewTests.m */; };
 		89007C5F1F29D9B600EA8D75 /* NHFHorizontalPickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C5E1F29D9B600EA8D75 /* NHFHorizontalPickerViewUITests.m */; };
 		89007C6F1F29DA0000EA8D75 /* HorizontalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C6E1F29DA0000EA8D75 /* HorizontalPickerView.m */; };
-		89BA08051F2ACC7E00480BAC /* HorizontalPickerViewUICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BA08041F2ACC7E00480BAC /* HorizontalPickerViewUICollectionViewCell.m */; };
+		89EE67401F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EE673F1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		89007C601F29D9B600EA8D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89007C6D1F29DA0000EA8D75 /* HorizontalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPickerView.h; sourceTree = "<group>"; };
 		89007C6E1F29DA0000EA8D75 /* HorizontalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPickerView.m; sourceTree = "<group>"; };
-		89BA08031F2ACC7E00480BAC /* HorizontalPickerViewUICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPickerViewUICollectionViewCell.h; sourceTree = "<group>"; };
-		89BA08041F2ACC7E00480BAC /* HorizontalPickerViewUICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPickerViewUICollectionViewCell.m; sourceTree = "<group>"; };
+		89EE673E1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPickerViewUICollectionViewCell.h; sourceTree = "<group>"; };
+		89EE673F1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPickerViewUICollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,18 +150,18 @@
 		89007C6C1F29D9D800EA8D75 /* HorizontalPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				89BA08021F2ACC4E00480BAC /* HorizontalPickerViewUICollectionViewCell */,
+				89EE673D1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell */,
 				89007C6D1F29DA0000EA8D75 /* HorizontalPickerView.h */,
 				89007C6E1F29DA0000EA8D75 /* HorizontalPickerView.m */,
 			);
 			path = HorizontalPickerView;
 			sourceTree = "<group>";
 		};
-		89BA08021F2ACC4E00480BAC /* HorizontalPickerViewUICollectionViewCell */ = {
+		89EE673D1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				89BA08031F2ACC7E00480BAC /* HorizontalPickerViewUICollectionViewCell.h */,
-				89BA08041F2ACC7E00480BAC /* HorizontalPickerViewUICollectionViewCell.m */,
+				89EE673E1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.h */,
+				89EE673F1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m */,
 			);
 			path = HorizontalPickerViewUICollectionViewCell;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89BA08051F2ACC7E00480BAC /* HorizontalPickerViewUICollectionViewCell.m in Sources */,
+				89EE67401F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m in Sources */,
 				89007C6F1F29DA0000EA8D75 /* HorizontalPickerView.m in Sources */,
 				89007C411F29D9B600EA8D75 /* ViewController.m in Sources */,
 				89007C3E1F29D9B600EA8D75 /* AppDelegate.m in Sources */,
