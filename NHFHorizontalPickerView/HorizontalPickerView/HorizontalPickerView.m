@@ -7,7 +7,7 @@
 //
 
 #import "HorizontalPickerView.h"
-#import "HorizontalPickerViewUICollectionViewCell.h"
+#import "HorizontalPickerViewUICollectionViewCell/HorizontalPickerViewUICollectionViewCell.h"
 
 static NSString * identifier = @"HorizontalPickerViewCellID";
 
