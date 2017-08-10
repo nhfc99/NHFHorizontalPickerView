@@ -16,6 +16,7 @@
 		89007C541F29D9B600EA8D75 /* NHFHorizontalPickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C531F29D9B600EA8D75 /* NHFHorizontalPickerViewTests.m */; };
 		89007C5F1F29D9B600EA8D75 /* NHFHorizontalPickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C5E1F29D9B600EA8D75 /* NHFHorizontalPickerViewUITests.m */; };
 		89007C6F1F29DA0000EA8D75 /* HorizontalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C6E1F29DA0000EA8D75 /* HorizontalPickerView.m */; };
+		89167C8E1F3BFCC400F6BFD6 /* H_example_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 89167C8D1F3BFCC400F6BFD6 /* H_example_ico.png */; };
 		89969F741F39D34F001230FC /* RSMaskedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89969F731F39D34F001230FC /* RSMaskedLabel.m */; };
 		89969F771F39DCAD001230FC /* left_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 89969F751F39DCAD001230FC /* left_ico.png */; };
 		89969F781F39DCAD001230FC /* right_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 89969F761F39DCAD001230FC /* right_ico.png */; };
@@ -58,6 +59,7 @@
 		89007C601F29D9B600EA8D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89007C6D1F29DA0000EA8D75 /* HorizontalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPickerView.h; sourceTree = "<group>"; };
 		89007C6E1F29DA0000EA8D75 /* HorizontalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPickerView.m; sourceTree = "<group>"; };
+		89167C8D1F3BFCC400F6BFD6 /* H_example_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = H_example_ico.png; sourceTree = "<group>"; };
 		89969F721F39D34F001230FC /* RSMaskedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMaskedLabel.h; sourceTree = "<group>"; };
 		89969F731F39D34F001230FC /* RSMaskedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMaskedLabel.m; sourceTree = "<group>"; };
 		89969F751F39DCAD001230FC /* left_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_ico.png; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		89007C6C1F29D9D800EA8D75 /* HorizontalPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				89167C8D1F3BFCC400F6BFD6 /* H_example_ico.png */,
 				89969F751F39DCAD001230FC /* left_ico.png */,
 				89969F761F39DCAD001230FC /* right_ico.png */,
 				89969F721F39D34F001230FC /* RSMaskedLabel.h */,
@@ -287,6 +290,7 @@
 				89969F771F39DCAD001230FC /* left_ico.png in Resources */,
 				89007C491F29D9B600EA8D75 /* LaunchScreen.storyboard in Resources */,
 				89969F781F39DCAD001230FC /* right_ico.png in Resources */,
+				89167C8E1F3BFCC400F6BFD6 /* H_example_ico.png in Resources */,
 				89007C461F29D9B600EA8D75 /* Assets.xcassets in Resources */,
 				89007C441F29D9B600EA8D75 /* Main.storyboard in Resources */,
 			);
