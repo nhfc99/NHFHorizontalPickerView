@@ -67,6 +67,12 @@ static BOOL isCan = true;
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self setScrollToCell:1];
             });
+            
+            [_middleView setFrame:CGRectMake(0, 0, everyWidth, CGRectGetHeight(self.frame))];
+            [_middleView setCenter:CGPointMake(CGRectGetMidX(_collectionView.frame), CGRectGetMidY(_collectionView.frame))];
+            [_leftImageView setFrame:CGRectMake(0, CGRectGetMinY(_middleView.frame), (CGRectGetWidth(self.frame)-CGRectGetWidth(_middleView.frame))/2, CGRectGetHeight(_middleView.frame))];
+            [_rightImageView setFrame:CGRectMake(CGRectGetMaxX(_middleView.frame), CGRectGetMinY(_middleView.frame), (CGRectGetWidth(self.frame)-CGRectGetWidth(_middleView.frame))/2, CGRectGetHeight(_middleView.frame))];
+            [_bottomLineMiddleView setCenter:CGPointMake(CGRectGetMidX(_middleView.frame), CGRectGetHeight(_collectionView.frame))];
         }
     }
 }
@@ -88,23 +94,42 @@ static BOOL isCan = true;
            minimumLineSpacing:(CGFloat)minimumLineSpacing {
     self = [super initWithFrame:frame];
     if (self) {
+        [self setBackgroundColor:[UIColor clearColor]];
         font = [UIFont boldSystemFontOfSize:15];
+        
+        _middleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetHeight(frame), CGRectGetHeight(frame))];
+        [_middleView setBackgroundColor:[UIColor redColor]];
+        [self addSubview:_middleView];
+        
+        _leftImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(_middleView.frame), (CGRectGetWidth(frame)-CGRectGetWidth(_middleView.frame))/2, CGRectGetHeight(_middleView.frame))];
+        [_leftImageView setImage:[UIImage imageNamed:@"left_ico.png"]];
+        [self addSubview:_leftImageView];
+        
+        _rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_middleView.frame), CGRectGetMinY(_middleView.frame), (CGRectGetWidth(frame)-CGRectGetWidth(_middleView.frame))/2, CGRectGetHeight(_middleView.frame))];
+        [_rightImageView setImage:[UIImage imageNamed:@"right_ico.png"]];
+        [self addSubview:_rightImageView];
         
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
         layout.itemSize = CGSizeMake(CGRectGetHeight(frame), CGRectGetHeight(frame));
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        layout.minimumLineSpacing = minimumLineSpacing;
+        layout.minimumLineSpacing = -1.f;
         _minimumLineSpacing = minimumLineSpacing;
         
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame)) collectionViewLayout:layout];
-        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.scrollsToTop = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
+        [_collectionView setBounces:false];
         [self addSubview:_collectionView];
         [_collectionView registerClass:[HorizontalPickerViewUICollectionViewCell class] forCellWithReuseIdentifier:identifier];
+        
+        CGSize size = [HorizontalPickerView labelConstrainedToSize:@"999" font:font];
+        _bottomLineMiddleView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(_collectionView.frame), size.width, 2.f)];
+        [_bottomLineMiddleView setBackgroundColor:[UIColor redColor]];
+        [self addSubview:_bottomLineMiddleView];
     }
     return self;
 }
@@ -123,23 +148,24 @@ static BOOL isCan = true;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(everyWidth, CGRectGetHeight(self.frame));
+    return CGSizeMake(everyWidth+_minimumLineSpacing, CGRectGetHeight(self.frame));
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HorizontalPickerViewUICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     NSArray *array = [[NSArray alloc] initWithArray:_resource];
     if (array.count > indexPath.row) {
+        [cell setBackgroundColor:[UIColor clearColor]];
         CGPoint center = collectionView.center;
         CGPoint cellCenter = [collectionView convertPoint:cell.center toView:self];
         CGFloat offset = center.x - cellCenter.x;
         CGFloat value = - offset*1/2.f;
         CGFloat radiants = value / 360.0 * 2 * M_PI;
+        [cell.contentLabel setBackgroundColor:[UIColor whiteColor]];
         [cell.contentLabel setText:array[indexPath.row]];
-        [cell.contentLabel setTextColor:[UIColor colorWithWhite:0 alpha:1-fabs(radiants)/3.14f*4]];
         [cell.contentLabel setFont:font];
         
-        CALayer *layer = cell.layer;
+        CALayer *layer = cell.contentLabel.layer;
         CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
         rotationAndPerspectiveTransform.m34 = 1.0 / -90;
         rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, radiants, 0, 1, 0);
@@ -217,7 +243,7 @@ static BOOL isCan = true;
                               Cell:endCell];
         } else {//中间段
             HorizontalPickerViewUICollectionViewCell *middleCell = [self getMiddleCellBy:cells middleX:middleX];
-            [self changeToCell:middleCell scrollView:scrollView animated:false];
+            [self changeToCell:middleCell scrollView:scrollView animated:true];
         }
     }
 }

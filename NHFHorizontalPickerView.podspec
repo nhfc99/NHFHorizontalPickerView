@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "NHFHorizontalPickerView"
-  s.version          = "1.0.3"
+  s.version          = "1.0.4"
   s.summary          = "左右滑动选择文本数据"
   s.homepage         = "https://github.com/nhfc99/NHFHorizontalPickerView"
   s.license          = 'MIT'

@@ -24,8 +24,8 @@
     }
     
     CGFloat offset = 49.f;
-    HorizontalPickerView *horizontalPickerView = [[HorizontalPickerView alloc] initWithFrame:CGRectMake(offset, offset, CGRectGetWidth(self.view.frame)-2*offset, offset) minimumLineSpacing:8];
-    [horizontalPickerView setBackgroundColor:[UIColor grayColor]];
+    HorizontalPickerView *horizontalPickerView = [[HorizontalPickerView alloc] initWithFrame:CGRectMake(offset, offset, CGRectGetWidth(self.view.frame)-2*offset, offset) minimumLineSpacing:0];
+    [horizontalPickerView setBackgroundColor:[UIColor whiteColor]];
     [horizontalPickerView setResource:array];
     horizontalPickerView.horizontalPickerViewSelect = ^(NSString *object) {
         NSLog(@"object = %@", object);

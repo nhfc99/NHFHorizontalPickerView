@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RSMaskedLabel.h"
 
 @interface HorizontalPickerViewUICollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) UILabel *contentLabel;
+@property (nonatomic, strong) RSMaskedLabel *contentLabel;
 
 @end

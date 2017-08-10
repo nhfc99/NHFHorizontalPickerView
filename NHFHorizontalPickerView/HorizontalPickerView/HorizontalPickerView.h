@@ -14,6 +14,10 @@ typedef void(^HorizontalPickerViewSelect)(NSString *object);
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, copy) HorizontalPickerViewSelect horizontalPickerViewSelect;
+@property (nonatomic, strong) UIView *middleView;
+@property (nonatomic, strong) UIView *bottomLineMiddleView;
+@property (nonatomic, strong) UIImageView *leftImageView;
+@property (nonatomic, strong) UIImageView *rightImageView;
 
 - (void)setResource:(NSArray *)list;
 

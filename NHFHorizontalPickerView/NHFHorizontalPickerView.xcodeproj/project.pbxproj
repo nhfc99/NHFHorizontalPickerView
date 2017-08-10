@@ -16,6 +16,9 @@
 		89007C541F29D9B600EA8D75 /* NHFHorizontalPickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C531F29D9B600EA8D75 /* NHFHorizontalPickerViewTests.m */; };
 		89007C5F1F29D9B600EA8D75 /* NHFHorizontalPickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C5E1F29D9B600EA8D75 /* NHFHorizontalPickerViewUITests.m */; };
 		89007C6F1F29DA0000EA8D75 /* HorizontalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89007C6E1F29DA0000EA8D75 /* HorizontalPickerView.m */; };
+		89969F741F39D34F001230FC /* RSMaskedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89969F731F39D34F001230FC /* RSMaskedLabel.m */; };
+		89969F771F39DCAD001230FC /* left_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 89969F751F39DCAD001230FC /* left_ico.png */; };
+		89969F781F39DCAD001230FC /* right_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 89969F761F39DCAD001230FC /* right_ico.png */; };
 		89EE67401F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EE673F1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,10 @@
 		89007C601F29D9B600EA8D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89007C6D1F29DA0000EA8D75 /* HorizontalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPickerView.h; sourceTree = "<group>"; };
 		89007C6E1F29DA0000EA8D75 /* HorizontalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPickerView.m; sourceTree = "<group>"; };
+		89969F721F39D34F001230FC /* RSMaskedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMaskedLabel.h; sourceTree = "<group>"; };
+		89969F731F39D34F001230FC /* RSMaskedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMaskedLabel.m; sourceTree = "<group>"; };
+		89969F751F39DCAD001230FC /* left_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_ico.png; sourceTree = "<group>"; };
+		89969F761F39DCAD001230FC /* right_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_ico.png; sourceTree = "<group>"; };
 		89EE673E1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalPickerViewUICollectionViewCell.h; sourceTree = "<group>"; };
 		89EE673F1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalPickerViewUICollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +157,10 @@
 		89007C6C1F29D9D800EA8D75 /* HorizontalPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				89969F751F39DCAD001230FC /* left_ico.png */,
+				89969F761F39DCAD001230FC /* right_ico.png */,
+				89969F721F39D34F001230FC /* RSMaskedLabel.h */,
+				89969F731F39D34F001230FC /* RSMaskedLabel.m */,
 				89EE673D1F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell */,
 				89007C6D1F29DA0000EA8D75 /* HorizontalPickerView.h */,
 				89007C6E1F29DA0000EA8D75 /* HorizontalPickerView.m */,
@@ -233,6 +244,7 @@
 				TargetAttributes = {
 					89007C351F29D9B600EA8D75 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = DU5XLJ4CM8;
 						ProvisioningStyle = Manual;
 					};
 					89007C4E1F29D9B600EA8D75 = {
@@ -272,7 +284,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89969F771F39DCAD001230FC /* left_ico.png in Resources */,
 				89007C491F29D9B600EA8D75 /* LaunchScreen.storyboard in Resources */,
+				89969F781F39DCAD001230FC /* right_ico.png in Resources */,
 				89007C461F29D9B600EA8D75 /* Assets.xcassets in Resources */,
 				89007C441F29D9B600EA8D75 /* Main.storyboard in Resources */,
 			);
@@ -299,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89969F741F39D34F001230FC /* RSMaskedLabel.m in Sources */,
 				89EE67401F31A6FE00A65798 /* HorizontalPickerViewUICollectionViewCell.m in Sources */,
 				89007C6F1F29DA0000EA8D75 /* HorizontalPickerView.m in Sources */,
 				89007C411F29D9B600EA8D75 /* ViewController.m in Sources */,
@@ -452,12 +467,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DU5XLJ4CM8;
 				INFOPLIST_FILE = NHFHorizontalPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nhfc99.NHFHorizontalPickerView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsxh.jinheTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "34614a70-5bf1-48f5-992a-acd1080608c7";
+				PROVISIONING_PROFILE_SPECIFIER = jinheTest;
 			};
 			name = Debug;
 		};
@@ -465,12 +481,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DU5XLJ4CM8;
 				INFOPLIST_FILE = NHFHorizontalPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nhfc99.NHFHorizontalPickerView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsxh.jinheTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "34614a70-5bf1-48f5-992a-acd1080608c7";
+				PROVISIONING_PROFILE_SPECIFIER = jinheTest;
 			};
 			name = Release;
 		};
