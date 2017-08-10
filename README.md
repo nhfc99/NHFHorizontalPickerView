@@ -23,7 +23,7 @@ NSLog(@"object = %@", object);
 [self.view addSubview:horizontalPickerView];
 
 <h2>效果图</h2>
-![运行效果](https://github.com/nhfc99/NHFHorizontalPickerView/raw/master/NHFHorizontalPickerView/HorizontalPickerView/H_example_ico.png)
+![普通K线+KDJ副图](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232158515-2083550522.png)
 
 
 
